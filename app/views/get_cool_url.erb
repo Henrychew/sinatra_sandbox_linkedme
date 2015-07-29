@@ -1,0 +1,57 @@
+<div class="container"><br>
+<h1>Welcome to Linkedme</h1>
+
+<p>Tell us about yourself</p>
+
+<form action="/post_cool_url" method="post">
+
+	<input type="radio" name="age" value="13 - 18 years old"> 13 - 18 years old<br>
+	<input type="radio" name="age" value="18 - 30 years old" checked> 18 - 30 years old<br>
+	<input type="radio" name="age" value="30 and above years old"> 30 and above years old
+	<br><br>
+
+
+	<p>Tell us what do you love?<p>
+	<input type="checkbox" name="select" value="Music"> Music<br>
+	<input type="checkbox" name="select" value="Sports" checked> Sports<br>
+	<input type="checkbox" name="select" value="Travel"> Travel <br>
+	<input type="checkbox" name="select" value="Food"> Food <br>
+	<input type="checkbox" name="select" value="Car"> Car <br>
+	<br><br>
+
+	<select name="gender">
+	<option value="Male">Male</option>
+	<option value="Female">Female</option>
+	<option value="Gay">Gay</option>
+	<option value="Lesbian">Lesbian</option>
+	</select><br><br>
+
+
+
+
+ <textarea type="text" cols="55" rows="5" name="user_input">
+</textarea><br><br>
+<input type="submit" value="Say It!"><br><br>
+</form>
+
+
+</div>
+
+<div class="container">
+	<br><h2>News Feed</h2><hr><br>
+
+ 	<b>#######################<h3>Hi, I am "<%= @age if !@age.nil? %>"</h3>#######################</b><br><br><br><br>
+	
+ 	<div align="center"><br>
+	<%= @sentence if !@sentence.nil? %><b><br><br><br><br>
+
+
+	My hobby is"<%= @select if !@select.nil? %>"<br><br>
+	"<%= @gender if !@gender.nil? %>"
+	</div><br><br><br><br>
+
+	<div align="center"><br>
+	<%= @status if !@status.nil? %>
+	</div>
+</div>
+
